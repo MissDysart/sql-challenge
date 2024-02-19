@@ -1,0 +1,39 @@
+Departments
+-
+dept_no VARCHAR(5) PK
+dept_name VARCHAR
+
+Employees
+-
+emp_no INT PK
+emp_title_id VARCHAR(10) FK >- Titles.title_id
+birth_date VARCHAR(10)
+first_name VARCHAR
+last_name VARCHAR
+sex VARCHAR(1)
+hire_date VARCHAR(10)
+
+Salaries
+-
+salary_id INT PK
+emp_no INT FK -< Employees.emp_no
+salary INT
+
+Titles
+-
+title_id VARCHAR(10) PK
+title VARCHAR
+
+# Junction table (dept_emp) to handle many-to-many relationship between Departments and Employees
+# Composite key: emp_no, dept_no
+
+Dept_Emp
+-
+emp_no INT FK >- Employees.emp_no
+dept_no VARCHAR(5) FK >- Departments.dept_no
+
+Dept_Manager
+-
+mgr_id INT PK
+dept_no VARCHAR(5) FK >- Departments.dept_no
+emp_no INT
