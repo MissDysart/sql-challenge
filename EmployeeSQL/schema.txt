@@ -15,8 +15,7 @@ hire_date VARCHAR(10)
 
 Salaries
 -
-salary_id INT PK
-emp_no INT FK -< Employees.emp_no
+emp_no INT FK - Employees.emp_no
 salary INT
 
 Titles
@@ -24,8 +23,8 @@ Titles
 title_id VARCHAR(10) PK
 title VARCHAR
 
-# Junction table (dept_emp) to handle many-to-many relationship between Departments and Employees
-# Composite key: emp_no, dept_no
+
+# Junction tables:
 
 Dept_Emp
 -
@@ -34,6 +33,5 @@ dept_no VARCHAR(5) FK >- Departments.dept_no
 
 Dept_Manager
 -
-mgr_id INT PK
 dept_no VARCHAR(5) FK >- Departments.dept_no
-emp_no INT
+emp_no INT FK >- Employees.emp_no
