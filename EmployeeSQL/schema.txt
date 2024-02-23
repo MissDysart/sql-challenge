@@ -1,6 +1,6 @@
 Departments
 -
-dept_no VARCHAR(5) PK
+dept_no VARCHAR(10) PK
 dept_name VARCHAR
 
 Employees
@@ -29,9 +29,9 @@ title VARCHAR
 Dept_Emp
 -
 emp_no INT FK >- Employees.emp_no
-dept_no VARCHAR(5) FK >- Departments.dept_no
+dept_no VARCHAR(10) FK >- Departments.dept_no
 
 Dept_Manager
 -
-dept_no VARCHAR(5) FK >- Departments.dept_no
+dept_no VARCHAR(10) FK >- Departments.dept_no
 emp_no INT FK >- Employees.emp_no

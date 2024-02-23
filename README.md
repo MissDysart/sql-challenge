@@ -23,7 +23,7 @@ Data Modeling
 
 Data Engineering
 1. Used pgAmdin to create a table schema for the CSV files provided.
-2. Imported the CSV files into the appropriate tables using pgAdmin's import feature.
+2. Imported the CSV files into the appropriate tables (in the same order as the tables are listed in the table schema "pewlett_hackard.sql") using pgAdmin's import feature.
 
 Data Analysis - answers found in "ph_queries.sql"
 1. List the employee number, last name, first name, sex, and salary of each employee.
